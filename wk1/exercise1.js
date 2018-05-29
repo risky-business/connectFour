@@ -11,27 +11,30 @@
 "I have no idea!"*/
 
 function logType(val) {
-    if (typeof val== "undefined") {
-        return "undefined!";
+    if (typeof val == "undefined") {
+        console.log("undefined!");
     } else if (val == null) {
-        return "null!";
-    } else if (typeof val== "number") {
-        return "number!";
-    } else if(typeof val!="number"){
-        return "not a number!";
-    }
-    else if (typeof val== "boolean") {
-        return "boolean!";
-    } else if (typeof val =="string") {
-        return "string!";
-    } else if (typeof val =="function") {
-        return "function!";
-    } else if (typeof val== "object") {
-        return "object!";
-    } else if (typeof val== []) {
-        return "array!";
+        console.log("null!");
+    } else if (typeof val == "number") {
+        if (isNaN(val)){
+            console.log("not a number!");
+        }else {
+            console.log("number!");
+        }
+    } else if (typeof val == "boolean") {
+        console.log("boolean!");
+    } else if (typeof val == "string") {
+        console.log("string!");
+    } else if (typeof val == "function") {
+        console.log("function!");
+    } else if (typeof val == "object") {
+        if (Array.isArray(val)) {
+            console.log("array!");
+        } else {
+            console.log("object!");
+        }
     } else {
-        return "I have no idea";
+        console.log("I have no idea");
     }
 }
 logType();
