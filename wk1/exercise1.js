@@ -39,6 +39,21 @@ function logType(val) {
 }
 logType();
 
+
+//#2
+var a = {
+    Berlin: 'Germany',
+    Paris: 'France',
+    'New York': 'USA'
+};
+var b ={};
+for (var swab in a){
+    var c = a[swab];
+    b[c]=swab;
+
+}
+console.log(b);
+
 //#3
 for (var i = 10; i >= 0; i--) {
     console.log(i);
