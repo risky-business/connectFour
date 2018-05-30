@@ -1,48 +1,38 @@
-// #1
-function sum(){
-    var total=0;
+///#1
+function sum() {
+    var total = 0;
 
-    for (var i=0; i<arguments.length; i++){
+    for (var i = 0; i < arguments.length; i++) {
         total = total + arguments[i];
-
     }
     return total;
 }
 sum();
 
-/// #2]
-function fun1(){
+/// #2
+function fun1() {
     console.log("hello!");
 }
-function fun2(){
+function fun2() {
     console.log("Goodbye!");
 }
 
-function waitThenRun(args,args2){
-    setTimeout(args,1500);
-    setTimeout(args2,3000);
+function waitThenRun(args, args2) {
+    setTimeout(args, 1500);
+    setTimeout(args2, 3000);
 }
-waitThenRun(fun1,fun2);
+waitThenRun(fun1, fun2);
 
+///#3
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Write a function that takes another function as a parameter. It should wait 1.5 seconds and then run the function that was passed in.
-// waitThenRun(function() {
-//     console.log('Hello!');
-// }); // logs 'Hello!' 1.5 seconds later
-//
-// waitThenRun(function() {
-//     console.log('Goodbye!');
-// }); // logs 'Goodbye!' 1.5 seconds later
+function lotsOfNums(num) {
+    if (num <= 0 || isNaN(num)) {
+        return "error";
+    } else if (num >= 1000000) {
+        return num;
+    } else {
+        for (; num < 1000000; num *= 10) {}
+        return num;
+    }
+}
+lotsOfNums(34);
