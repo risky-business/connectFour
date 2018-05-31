@@ -12,32 +12,32 @@
 // callback and the index should be the second.
 //
 
-
-function each(args,fn) {
+function each(args, fn) {
     if (Array.isArray(args)) {
-        for (var i=0;i<args.length; i++){
-            fn(args[i],i);
+        for (var i = 0; i < args.length; i++) {
+            fn(args[i], i);
         }
     } else {
         for (var p in args) {
-            fn(args[p],p);
+            fn(args[p], p);
         }
     }
 }
 
 //#2
-var testArr=[1,2,3,4,5,6];
+var testArr = [1, 2, 3, 4, 5, 6];
 function a(args) {
     var sliced = args.slice();
+    console.log(args);
     return sliced.reverse();
-
 }
 
 a(testArr);
 
-
 //#3
 
-function getLessThanZero(){
-
+function getLessThanZero(args) {
+    return args.filter(function(fun) {
+        return fun < 0;
+    });
 }
