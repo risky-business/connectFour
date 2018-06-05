@@ -2,6 +2,14 @@
     var headlines = document.getElementById("headlines");
     var left = headlines.offsetLeft;
     var links = headlines.getElementsByTagName("A");
+    var myReqId;
+
+    headlines.addEventListener("mouseover", function() {
+        cancelAnimationFrame(myReqId);
+    });
+    headlines.addEventListener("mouseout", function() {
+        tick();
+    });
 
     function tick() {
         left--;
@@ -11,7 +19,7 @@
             headlines.style.left = left + "px";
         }
         headlines.style.left = left + "px";
-        requestAnimationFrame(tick);
+        myReqId = requestAnimationFrame(tick);
     }
 
     tick();

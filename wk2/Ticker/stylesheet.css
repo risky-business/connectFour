@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 #headlines {
     white-space: nowrap;
     position: absolute;
