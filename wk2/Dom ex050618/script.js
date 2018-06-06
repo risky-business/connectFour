@@ -1,3 +1,4 @@
+//#1
 var div = document.getElementById("that-div");
 document.addEventListener("mousemove", function(event) {
     var moveX = event.clientX;
@@ -23,3 +24,46 @@ textarea.addEventListener("input", function() {
 });
 
 //#3
+(function() {
+    var div2 = document.getElementById("this-div");
+
+    div2.addEventListener("mousedown", function() {
+        div2.style.backgroundColor = colorPicker();
+    });
+
+    div2.addEventListener("mouseup", function() {
+        div2.style.backgroundColor = colorPicker();
+    });
+    function colorPicker() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 10)];
+        }
+        return color;
+    }
+})();
+
+//#4
+
+(function() {
+    var outerDiv = document.getElementById("outer-div");
+    var innerDiv = document.getElementById("inner-div");
+
+    outerDiv.addEventListener("click", function() {
+        outerDiv.style.backgroundColor = colorPicker();
+    });
+    innerDiv.addEventListener("click", function(event) {
+        innerDiv.style.backgroundColor = colorPicker();
+        event.stopPropagation();
+    });
+
+    function colorPicker() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 10)];
+        }
+        return color;
+    }
+})();
