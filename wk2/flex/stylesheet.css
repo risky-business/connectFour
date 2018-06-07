@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: #3d79ca;
+    height: 70px;
+    width: 100%;
+}
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #f6416c;
+
+    height: 30px;
+    width: 100%;
+}
