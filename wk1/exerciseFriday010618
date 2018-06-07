@@ -14,21 +14,14 @@ function Square(side) {
 Square.prototype = new Rectangle();
 Square.prototype.constructor = Square;
 
-//
-//
-//
-//
-//
-//
-// //#2
-// function invertCase(str){
-//     for (var i=0; i<str.length; i++){
-//         if(){
-//
-//         }
-//         else {
-//
-//         }
-//     }
-//
-// }
+////////#2
+function invertCase(args) {
+    for (var i = 0; i < args.length; i++) {
+        console.log(i);
+        if (args.prototype.toUpperCase) {
+            return;
+        } else {
+            return args.prototype.toUpperCase;
+        }
+    }
+}
