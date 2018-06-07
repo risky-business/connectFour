@@ -1,0 +1,61 @@
+.box {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 25vh;
+    flex-direction: row;
+}
+
+.gray {
+    background-color: gray;
+    justify-content: flex-end;
+    width: 15%;
+    display: flex;
+    margin-right: 5px;
+}
+
+.orange {
+    background-color: orange;
+    width: 50%;
+    height: 50%;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 50%;
+    height: 50%;
+}
+
+.pink {
+    background-color: pink;
+    width: 50%;
+    height: 50%;
+}
+.green {
+    background-color: green;
+    width: 50%;
+    height: 50%;
+}
+
+.purple {
+    background-color: purple;
+    width: 15%;
+}
+
+.blue {
+    background-color: blue;
+    align-items: flex-end;
+    width: 15%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 5px;
+}
+.black {
+    background-color: black;
+    align-items: flex-end;
+    width: 15%;
+    margin-right: 5px;
+    display: flex;
+    margin-right: 5px;
+    justify-content: flex-end;
+}
