@@ -1,26 +1,34 @@
 (function() {
-    var headlines = document.getElementById("headlines");
-    var left = headlines.offsetLeft;
-    var links = headlines.getElementsByTagName("A");
+    var headLines = $("#headlines");
+    var position = headLines.offset().left;
+    var leftPos = position;
+    var links = $("A");
     var myReqId;
 
-    headlines.addEventListener("mouseover", function() {
-        cancelAnimationFrame(myReqId);
-    });
-    headlines.addEventListener("mouseout", function() {
-        tick();
-    });
+    $('#headlines')
+        .on("mouseover", function() {
+            cancelAnimationFrame(myReqId);
+        })
+        .on("mouseout", function() {
+            tick();
+        });
+
+
+
 
     function tick() {
-        left--;
-        if (left < -links[0].offsetWidth) {
-            left += links[0].offsetWidth;
-            headlines.appendChild(links[0]);
-            headlines.style.left = left + "px";
+        leftPos--;
+        if (leftPos < -links.eq(0).outerWidth()) {
+            leftPos +=links.eq(0).outerWidth();
+            $('#headlines').append(links.eq(0));
+            links = $("A");
+
         }
-        headlines.style.left = left + "px";
+        $('#headlines').css({
+            left: leftPos + "px"
+        });
+        leftPos + "px";
         myReqId = requestAnimationFrame(tick);
     }
-
     tick();
 })();
