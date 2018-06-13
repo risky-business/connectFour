@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+}
+
+.highlight {
+    background-color: #d3d3d3;
+    color: blue;
+}
+#results {
+    width: 400px;
+    border: 1px black solid;
+}
+#search {
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+}
+input {
+    position: relative;
+    width: 400px;
+    height: 3em;
+    border: 1px black solid;
+    font-size: 28px;
+    text-indent: 7px;
+}
