@@ -1,6 +1,5 @@
 (function() {
     var currentPlayer = "player1";
-    var diaVictory = false;
 
     $(".column").on("click", function(e) {
         var slotsInColumn = $(e.currentTarget).find(".slot");
@@ -13,17 +12,18 @@
         }
         slotsInColumn.eq(i).addClass(currentPlayer);
 
-        if (checkForVictory(slotsInColumn) && diaVictory) {
-            alert("Vertical victory");
+        if (checkForVictory(slotsInColumn)) {
+            setTimeout(function() {
+                $(".popup-overlay").addClass("active");
+            }, 500);
         } else {
             if (checkForVictory($(".row" + i))) {
-                alert("victory");
+                setTimeout(function() {
+                    $(".popup-overlay").addClass("active");
+                }, 500);
             } else {
-                if (diagonalVictory()) {
-                    alert("Victory");
-                }
+                diagonalVictory();
             }
-
             if (currentPlayer == "player1") {
                 currentPlayer = "player2";
             } else if (currentPlayer == "player2") {
@@ -67,8 +67,9 @@
                 if (slots.eq(lists[i][1]).hasClass(currentPlayer)) {
                     if (slots.eq(lists[i][2]).hasClass(currentPlayer)) {
                         if (slots.eq(lists[i][3]).hasClass(currentPlayer)) {
-                            console.log("victory");
-                            diaVictory = true;
+                            setTimeout(function() {
+                                $(".popup-overlay").addClass("active");
+                            }, 500);
                         }
                     }
                 }
@@ -88,7 +89,7 @@
 
         return str.indexOf("vvvv") > -1;
     }
-    $(".resetButton").on("click", function() {
+    $("#resetButton").on("click", function() {
         location.reload(); //once game is done
     });
 })();
