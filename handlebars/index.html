@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="utf-8">
+        <title>Authors</title>
+    </head>
+    <body>
+
+
+
+
+        <div class="authors-list"></div>
+
+
+        <script id="authorslist" type="text/x-handlebars-template">
+
+
+            {{#each allAuthors}}
+            <p>Name: {{name}},<br>Born: {{born}},<br>Died: {{died}},<br>Writings: {{selectedWritings}},<br>Quotes: {{quote}},<br> <img src="{{photo}}"></p>
+            {{/each}}
+
+        </script>
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
