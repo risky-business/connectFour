@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    border: 1px;
+    height: 100px;
+    background-color: white;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.greeting-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.greeting-menu {
+    position: absolute;
+    background-color: white;
+    border-radius: 3%;
+    width: 700px;
+    height: 300px;
+    left: 35%;
+    top: 50%;
+    margin-left: -120px;
+    margin-top: -140px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.close {
+    float: right;
+    height: 2px;
+    width: 2px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    color: black;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.active #hamburger-pop-menu,
+.active .menu {
+    display: block;
+
+    transition: transform 1s;
+}
+
+#hamburger-pop-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#x {
+    text-align: right;
+    padding-right: 60px;
+    padding-top: 30px;
+}
+.info {
+    padding-top: 5px;
+    padding-left: 20px;
+    color: blue;
+}
+
+.smallinfo {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.menu {
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: none;
+    position: absolute;
+    background-color: white;
+    max-width: 350px;
+    width: 50%;
+}
+
+.sprint {
+    float: left;
+    height: 50px;
+}
+
+.hamburger-menu {
+    float: right;
+    height: 50px;
+}
+.middle {
+    position: relative;
+}
+.reichstag {
+    width: 100%;
+    filter: brightness(80%);
+    display: block;
+}
+.centered-text {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 43px;
+}
+
+.button {
+    display: inline-block;
+    font-size: 24px;
+    background-color: rgb(255, 204, 51);
+    border-radius: 75px;
+    width: 225px;
+    height: 45px;
+    color: rgb(204, 102, 0);
+    border: 4px solid rgb(204, 102, 0);
+}
+.background-gray-box {
+    position: relative;
+    width: 100vw;
+    background-color: #cccccc;
+    height: 330px;
+}
+.textbox {
+    margin-top: 40px;
+    display: inline-block;
+    width: 35%;
+    height: 90px;
+    position: relative;
+    left: 15%;
+}
+.text-left {
+    display: inline-block;
+    width: 80%;
+
+    position: absolute;
+    top: 0%;
+    right: 6%;
+}
+.image-left {
+    position: absolute;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: auto;
+    transform: scale(0.8);
+    margin-right: 100px;
+}
+
+.text-right {
+    display: inline-block;
+    width: 80%;
+    position: absolute;
+    left: 15%;
+}
+.image-right {
+    float: left;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: auto;
+    transform: scale(0.8);
+}
+
+.text-bottom-left {
+    display: inline-block;
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    top: -13%;
+    right: 6%;
+}
+.image-bottom-left {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    margin-right: -8%;
+
+    transform: scale(0.8);
+}
+
+.text-bottom-right {
+    display: inline-block;
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    left: 16%;
+}
+.image-bottom-right {
+    float: left;
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+    margin-bottom: auto;
+    transform: scale(0.8);
+}
+
+.footer {
+    background-color: #666666;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3);
