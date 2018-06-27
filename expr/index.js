@@ -16,15 +16,19 @@ app.use("/spotifyApiSearch", function(req, res, next) {
             "WWW-Authenticate",
             'Basic realm="Enter your credentials to see this stuff."'
         );
-        res.sendStatus(401);
+        res.status(401).send("");
     } else {
         next();
     }
+});
+app.use("/favicon.ico", function(req, res) {
+    res.sendStatus(204);
 });
 
 app.use(cookieParser());
 
 app.use(function(req, res, next) {
+    console.log(req.url);
     if (!req.cookies.accepted && req.url != "/cookie") {
         res.cookie("url", req.url);
         res.redirect("/cookie");
