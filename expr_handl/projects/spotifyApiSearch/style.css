@@ -1,0 +1,52 @@
+* {
+    background-color: #282828;
+}
+body {
+    width: 100%;
+    position: absolute;
+}
+h1 {
+    text-align: center;
+}
+#search {
+    text-align: center;
+}
+#select {
+    margin-left: 400px;
+}
+
+#go {
+    margin-left: 600px;
+}
+.title {
+    text-align: center;
+}
+
+#result {
+}
+img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+.result {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    color: white;
+}
+.name {
+    font-size: 20px;
+    display: grid;
+    align-self: center;
+    width: auto;
+}
+.header {
+    width: 100%;
+    text-align: center;
+}
+input {
+    border-color: white;
+    color: gray;
+}
